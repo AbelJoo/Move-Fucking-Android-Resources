@@ -3,7 +3,7 @@ import shutil
 
 __author__ = 'abel'
 
-__source_path = "/ssd/Abel/documents/Super/Android,iOS-Client-Social/下课聊/切图/发布"
+__source_path = "/ssd/Abel/documents/Super/Android,iOS-Client-Social/下课聊/切图/下课聊弹窗icon/source"
 __target_path = "/home/abel/桌面/target"
 
 
@@ -49,6 +49,6 @@ def __copy_resource_to_dir(target_dir_name, prefix, resource_names):
 
 def copy_resource():
     resource_names = [file_name for file_name in os.listdir(__source_path) if not os.path.isdir(file_name)]
-    __copy_resource_to_dir("xh_drawable", "xh_", resource_names)
-    __copy_resource_to_dir("xxh_drawable", "xxh_", resource_names)
+    __copy_resource_to_dir("drawable-xhdpi", "xh_", resource_names)
+    __copy_resource_to_dir("drawable-xxhdpi", "xxh_", resource_names)
     print("已完成" + str(len(resource_names)) + "个资源文件分类")
