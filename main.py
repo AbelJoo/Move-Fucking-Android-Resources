@@ -1,17 +1,31 @@
-import task
+import resources_task
 
 __author__ = 'abel'
 
 
-def start():
-    # task.config_source_folder()
-    # task.config_target_folder()
+def __help():
+    print("this is help")
 
-    #######################
 
-    task.copy_resource()
+def __loop_command():
+    while True:
+        command = input()
+        if command == "source":
+            resources_task.config_source_path()
+        elif command == "target":
+            resources_task.config_target_path()
+        elif command == "help":
+            __help()
+
+
+def __start():
+    # task.config_source_path()
+    # task.config_target_path()
+    resources_task.copy_resource()
+
+    __loop_command()
 
 
 if __name__ == '__main__':
-    print("hello world")
-    start()
+    print("__main__")
+    __start()
