@@ -7,8 +7,8 @@ import shutil
 
 __author__ = 'abel'
 
-__source_path = "/ssd/Abel/documents/Super/Android,iOS-Client-Social/下课聊/切图/下课聊弹窗icon/source"
-__target_path = "/home/abel/桌面/target"
+__source_path = None
+__target_path = None
 
 
 def user_task_config_source_path():
@@ -50,6 +50,7 @@ def user_task_copy_resource():
 
 
 def user_task_show_help():
+    print("")
     print("命令列表：")
     print("copy\t\t从资源目录分类拷贝文件到工程res资源目录")
     print("cs\t\t(config source)设置待导入的资源目录路径")
@@ -60,6 +61,7 @@ def user_task_show_help():
     print("Step2:\n将Step1中的所有资源文件放到同一目录下，并执行“cs”，设置为该目录路径")
     print("Step3:\n执行“ct”，设置为您项目工程的资源文件目录（res目录,即drawable-xhdpi，drawable-xxhdpi等资源目录的父目录）")
     print("Step4:\n执行“copy”，上述Step1中的xh_前缀文件将拷贝到资源目录下的drawable-xhdpi，以此类推")
+    print("")
 
 
 def user_task_show_info():
@@ -137,10 +139,10 @@ def __command_distribution(command):
 
 
 def __start():
-    # user_task_config_source_path()
-    # user_task_config_target_path()
+    user_task_config_source_path()
+    user_task_config_target_path()
 
-    # print("配置完成。")
+    print("配置完成。")
     user_task_show_info()
     print("如需帮助，请键入“help”")
 
@@ -148,4 +150,12 @@ def __start():
 
 
 if __name__ == '__main__':
+    print("")
+    print("#######################################################")
+    print("#                                                     #")
+    print("#      Welcome to Move-Fucking-Android-Resources      #")
+    print("#  github.com/AbelJoo/Move-Fucking-Android-Resources  #")
+    print("#                                                     #")
+    print("#######################################################")
+    print("")
     __start()
